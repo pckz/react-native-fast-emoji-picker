@@ -41,7 +41,7 @@ interface PropsType {
   showTabs?: boolean;
   onEmojiSelected(emoji: string): void;
 }
-export default class RecycleTestComponent extends React.Component<PropsType> {
+export default class FastEmojiPicker extends React.Component<PropsType> {
   state = {
     searchQuery: "",
     category: Categories.all,
@@ -256,7 +256,7 @@ export default class RecycleTestComponent extends React.Component<PropsType> {
     );
   }
 }
-RecycleTestComponent.defaultProps = {
+FastEmojiPicker.defaultProps = {
   showTabs: true,
   showSearchBar: true,
   showSectionTitles: true,

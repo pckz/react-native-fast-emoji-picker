@@ -1,18 +1,13 @@
 # react-native-fast-emoji-picker
 
-![Image of react-native-fast-emoji-picker](./accets/1.png)
+![Image of react-native-fast-emoji-picker](./assets/1.png)
 
 # Installation
 
 ```
-yarn add react-native-fast-emoji-picker
+yarn add https://github.com/pckz/react-native-fast-emoji-picker.git
 ```
 
-or
-
-```
-npm i react-native-fast-emoji-picker
-```
 
 #
 
@@ -24,7 +19,7 @@ import EmojiPicker from "react-native-fast-emoji-picker";
 
 # Demo
 
-![Image of react-native-fast-emoji-picker](./accets/2.gif)
+![Image of react-native-fast-emoji-picker](./assets/2.gif)
 
 # Usage
 

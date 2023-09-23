@@ -1,3 +1,3 @@
-import EmojiSelect from "./src/RecycleTestComponent";
+import EmojiSelect from "./src/FastEmojiPicker";
 
 export default EmojiSelect;

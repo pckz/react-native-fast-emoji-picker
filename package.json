@@ -17,7 +17,7 @@
     "android",
     "ui"
   ],
-  "author": "kiran yadav",
+  "author": "Pedro Ojeda",
   "license": "MIT",
   "dependencies": {
     "emoji-datasource": "^5.0.1",
