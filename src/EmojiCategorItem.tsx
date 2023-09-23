@@ -1,8 +1,6 @@
 import React from 'react';
-import {TapGestureHandler, State} from 'react-native-gesture-handler';
-import Animated from 'react-native-reanimated';
-import {Text, View} from 'react-native';
-import {string} from 'react-native-redash';
+import { TouchableOpacity, View, Text } from 'react-native';
+
 interface EmojiCategorItem {
   item: {
     name: string;
@@ -18,40 +16,35 @@ const EmojiCategorItem = ({
   item,
   onPress,
   activeCategory,
-  tabSize,
+  tabSize = 50,
   theme,
 }: EmojiCategorItem) => {
-  if (item.name != 'All') {
+  if (item.name !== 'All') {
     return (
-      <TapGestureHandler
-        onHandlerStateChange={(event) => {
-          if (event.nativeEvent.state === State.END) {
-            onPress();
-          }
-        }}>
-        <Animated.View
+      <TouchableOpacity onPress={onPress} style={{ width: tabSize, height: tabSize }}>
+        <View
           key={item.name}
           style={{
             flex: 1,
             width: tabSize,
             height: tabSize,
-
             borderColor: item === activeCategory ? theme : '#EEEEEE',
             borderBottomWidth: 1,
             alignItems: 'center',
             justifyContent: 'center',
-            // transform: [{scale}],
-          }}>
+          }}
+        >
           <Text
             style={{
               textAlign: 'center',
               paddingBottom: 8,
               fontSize: tabSize - 24,
-            }}>
+            }}
+          >
             {item.symbol}
           </Text>
-        </Animated.View>
-      </TapGestureHandler>
+        </View>
+      </TouchableOpacity>
     );
   } else {
     return <View />;

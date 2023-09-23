@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { View, Text, ActivityIndicator, Platform } from "react-native";
+import { View, Text, ActivityIndicator, Platform, TouchableOpacity } from "react-native";
 import {
   RecyclerListView,
   DataProvider,
@@ -8,7 +8,6 @@ import {
 import emoji from "emoji-datasource";
 import Animated from "react-native-reanimated";
 
-import { TapGestureHandler, State } from "react-native-gesture-handler";
 import TabBar from "./TapBar";
 
 import Categories from "./Categories";
@@ -84,6 +83,9 @@ export default class FastEmojiPicker extends React.Component<PropsType> {
     }
   };
   handleEmojiSelect = (emoji: { unified: string }) => {
+
+    console.log("Emoji seleccionado: ", charFromEmojiObject(emoji));
+
     this.props.onEmojiSelected(charFromEmojiObject(emoji));
   };
 
@@ -139,16 +141,9 @@ export default class FastEmojiPicker extends React.Component<PropsType> {
 
   _rowRenderer(type: any, data: { emoji: { unified: any } }) {
     return (
-      <TapGestureHandler
-        onHandlerStateChange={(event) => {
-          if (event.nativeEvent.state === State.END) {
-            // console.log(event);
-            this.handleEmojiSelect(data.emoji);
-          }
-        }}
-      >
-        <Animated.View
-          key={emoji}
+      <TouchableOpacity onPress={() => this.handleEmojiSelect(data.emoji)}>
+        <View
+          key={data.emoji.unified}
           style={{
             alignItems: "center",
             justifyContent: "center",
@@ -162,8 +157,8 @@ export default class FastEmojiPicker extends React.Component<PropsType> {
           >
             {charFromEmojiObject(data.emoji)}
           </Text>
-        </Animated.View>
-      </TapGestureHandler>
+        </View>
+      </TouchableOpacity>
     );
   }
   handleLayout = ({ nativeEvent: { layout } }) => {
