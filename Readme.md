@@ -15,7 +15,7 @@ yarn add @pckz/react-native-fast-emoji-picker
 import EmojiPicker from "react-native-fast-emoji-picker";
 ```
 
-### You need to have [reanimated](https://github.com/software-mansion/react-native-reanimated) and [react native gesture handler](https://github.com/software-mansion/react-native-gesture-handler) installed.
+### You need to have [reanimated](https://github.com/software-mansion/react-native-reanimated) installed.
 
 # Demo
 
@@ -48,10 +48,6 @@ import EmojiPicker from "@pckz/react-native-fast-emoji-picker";
 | columns           | _number_ | `6`              | Number of columns accross                                |
 | placeholder       | _string_ | `"Search Emoji"` | A string placeholder when there is no text in text input |
 
-# Todo
-
-[ ] Tap FeedBack <br/>
-[ ] Scroll Animation
 
 # Debug
 
@@ -65,9 +61,6 @@ import EmojiPicker from "@pckz/react-native-fast-emoji-picker";
 yarn add react-native-reanimated
 ```
 
-```
-yarn add react-native-gesture-handler
-```
 
 ### Error:
 
