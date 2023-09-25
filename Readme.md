@@ -24,7 +24,7 @@ import EmojiPicker from "react-native-fast-emoji-picker";
 # Usage
 
 ```javascript
-import EmojiPicker from "react-native-fast-emoji-picker";
+import EmojiPicker from "@pckz/react-native-fast-emoji-picker";
 ```
 
 ```jsx
