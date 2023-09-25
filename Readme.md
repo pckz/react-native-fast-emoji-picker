@@ -5,7 +5,7 @@
 # Installation
 
 ```
-yarn add https://github.com/pckz/react-native-fast-emoji-picker.git
+yarn add @pckz/react-native-fast-emoji-picker
 ```
 
 
