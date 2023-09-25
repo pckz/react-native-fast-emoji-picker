@@ -1,7 +1,5 @@
 import React from "react";
-
-import { TextInput } from "react-native-gesture-handler";
-import { View, StyleSheet, Platform } from "react-native";
+import { View, StyleSheet, Platform, TextInput } from "react-native";
 interface Searchbar {
   theme: any;
   handleSearch(searchQuery: string): void;
