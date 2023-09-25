@@ -1,5 +1,5 @@
 {
-  "name": "react-native-fast-emoji-picker",
+  "name": "@pckz/react-native-fast-emoji-picker",
   "version": "1.0.3-development",
   "description": "emoji picker for react native",
   "main": "index.js",
